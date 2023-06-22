@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 import './screens/homepage.dart';
+import './screens/giftoption.dart';
 
 void main() {
   runApp(
@@ -16,6 +17,10 @@ class ClothingDesignApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
         fontFamily: "BeVietnamPro",
         canvasColor: const Color(
           0xffffffff,
@@ -46,9 +51,10 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
-      // routes: {
-      // },
+      home: const GiftOption(),
+      routes: {
+        GiftOption.route_screen: (_) => const GiftOption(),
+      },
     );
   }
 }
