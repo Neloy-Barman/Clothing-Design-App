@@ -56,10 +56,6 @@ class _GiftOptionState extends State<GiftOption> {
         title: const Center(
           child: Text(
             "GIFT OPTION",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w500,
-            ),
           ),
         ),
       ),
