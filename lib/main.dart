@@ -1,6 +1,9 @@
 import "package:flutter/material.dart";
 
 import './screens/homepage.dart';
+
+import './screens/profile.dart';
+
 import './screens/giftoption.dart';
 import './screens/confirmation.dart';
 
@@ -85,8 +88,9 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const Confirmation(),
+      home: const Profile(),
       routes: {
+        Profile.routeScreen: (_) => const Profile(),
         GiftOption.route_screen: (_) => const GiftOption(),
         Confirmation.routeScreen: (_) => const Confirmation(),
       },
