@@ -62,67 +62,82 @@ class _MarketScreenState extends State<MarketScreen> {
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: .82,
+            childAspectRatio: .68,
             mainAxisSpacing: 15,
             crossAxisSpacing: 15,
           ),
           itemCount: products.length,
           itemBuilder: (context, index) {
-            return Container(
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Stack(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(
-                              15,
-                            ),
-                            child: Container(
-                              width: double.infinity,
-                              child: Image(
-                                image: NetworkImage(
-                                  products[index].imageUrl,
+            return Card(
+              elevation: 2,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(
+                    15,
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          bottom: 15,
+                        ),
+                        child: Stack(
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(
+                                15,
+                              ),
+                              child: Container(
+                                width: double.infinity,
+                                child: Image(
+                                  image: NetworkImage(
+                                    products[index].imageUrl,
+                                  ),
+                                  fit: BoxFit.fill,
                                 ),
-                                fit: BoxFit.fill,
                               ),
                             ),
-                          ),
-                          const Positioned(
-                            right: 10,
-                            top: 5,
-                            child: Icon(
-                              Icons.favorite_border_outlined,
-                              color: Color(
-                                0xffF76834,
+                            const Positioned(
+                              right: 10,
+                              top: 5,
+                              child: Icon(
+                                Icons.favorite_border_outlined,
+                                color: Color(
+                                  0xffF76834,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                  FittedBox(
-                    child: Text(
-                      products[index].title,
-                      style: Theme.of(context).textTheme.labelMedium,
+                    FittedBox(
+                      child: Text(
+                        products[index].title,
+                        style: Theme.of(context).textTheme.labelMedium,
+                      ),
                     ),
-                  ),
-                  Text(
-                    products[index].subtitle,
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  ),
-                  FittedBox(
-                    child: Text(
-                      "\$${products[index].price.toStringAsFixed(
-                            2,
-                          )}",
-                      style: Theme.of(context).textTheme.titleMedium,
+                    Text(
+                      products[index].subtitle,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     ),
-                  ),
-                ],
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        bottom: 8,
+                      ),
+                      child: FittedBox(
+                        child: Text(
+                          "\$${products[index].price.toStringAsFixed(
+                                2,
+                              )}",
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             );
           },
