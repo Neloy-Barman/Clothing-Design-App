@@ -1,11 +1,14 @@
 import "package:flutter/material.dart";
 
+import './screens/parent.dart';
+
 import './screens/homepage.dart';
-
-import './screens/profile.dart';
-
+// import 'widgetBodies/profile.dart';
 import './screens/giftoption.dart';
 import './screens/confirmation.dart';
+// import 'widgetBodies/settings.dart';
+
+import './screens/market.dart';
 
 void main() {
   runApp(
@@ -31,6 +34,7 @@ class ClothingDesignApp extends StatelessWidget {
           titleTextStyle: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w500,
+            fontSize: 23,
           ),
         ),
         fontFamily: "BeVietnamPro",
@@ -70,11 +74,26 @@ class ClothingDesignApp extends StatelessWidget {
               0xff868696,
             ),
           ),
+          displayMedium: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.black,
+          ),
           headlineSmall: TextStyle(
             fontSize: 15.5,
             color: Color(
               0xff868696,
             ),
+          ),
+          labelMedium: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+          titleMedium: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w900,
+            color: Colors.black,
           ),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
@@ -88,11 +107,14 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const Profile(),
+      home: const MarketScreen(),
       routes: {
-        Profile.routeScreen: (_) => const Profile(),
+        ParentScreen.routeScreen: (_) => const ParentScreen(),
+        // Profile.routeScreen: (_) => const Profile(),
         GiftOption.route_screen: (_) => const GiftOption(),
         Confirmation.routeScreen: (_) => const Confirmation(),
+        // AppSettings.routeScreen: (_) => AppSettings(),
+        MarketScreen.routeScreen: (_) => const MarketScreen(),
       },
     );
   }
