@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart' as badges;
+// import 'package:badges/badges.dart' as badges;
 
 import '../models/Product.dart';
 
@@ -22,6 +22,13 @@ class _MarketScreenState extends State<MarketScreen> {
       imageUrl:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScGxCyHsUDa2QDndS2XeBjodoNfMwdBWeqjJm-DBdi68b5HVkVTN51tKG9wzR6tSZjoNk&usqp=CAU",
       price: 40.00,
+    ),
+    Product(
+      title: "Men Black Jacket",
+      subtitle: "Levi's",
+      imageUrl:
+          "https://rukminim1.flixcart.com/image/550/650/xif0q/jacket/a/h/i/xl-mnt-7025-montrez-original-imag5hb93udpfs4q-bb.jpeg?q=90&crop=false",
+      price: 55.35,
     ),
     Product(
       title: "Men Black Shirt",
@@ -69,12 +76,13 @@ class _MarketScreenState extends State<MarketScreen> {
           itemCount: products.length,
           itemBuilder: (context, index) {
             return Card(
-              elevation: 2,
+              elevation: 5,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
                     15,
                   ),
+                  color: Colors.transparent,
                 ),
                 child: Column(
                   children: [
@@ -87,7 +95,7 @@ class _MarketScreenState extends State<MarketScreen> {
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(
-                                15,
+                                5,
                               ),
                               child: Container(
                                 width: double.infinity,
