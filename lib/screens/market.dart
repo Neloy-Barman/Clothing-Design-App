@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:badges/badges.dart' as badges;
 
 import '../models/Product.dart';
 
@@ -47,14 +48,21 @@ class _MarketScreenState extends State<MarketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Center(
+          child: Text(
+            "Favourites",
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(
-          8.0,
+          15.0,
         ),
         child: GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
-            childAspectRatio: 0.75,
+            childAspectRatio: .82,
             mainAxisSpacing: 15,
             crossAxisSpacing: 15,
           ),
@@ -96,19 +104,23 @@ class _MarketScreenState extends State<MarketScreen> {
                       ),
                     ),
                   ),
-                  Text(
-                    products[index].title,
-                    style: Theme.of(context).textTheme.labelMedium,
+                  FittedBox(
+                    child: Text(
+                      products[index].title,
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
                   ),
                   Text(
                     products[index].subtitle,
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
-                  Text(
-                    "\$${products[index].price.toStringAsFixed(
-                          2,
-                        )}",
-                    style: Theme.of(context).textTheme.titleMedium,
+                  FittedBox(
+                    child: Text(
+                      "\$${products[index].price.toStringAsFixed(
+                            2,
+                          )}",
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
                   ),
                 ],
               ),
