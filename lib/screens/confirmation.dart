@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import "package:dotted_line/dotted_line.dart";
 
+import '../itemWidgets/dottedLineRow.dart';
+import '../itemWidgets/elevationButtonBuilder.dart';
+
 class Confirmation extends StatelessWidget {
   static const routeScreen = "./confirmatio-screen";
   const Confirmation({
@@ -9,71 +12,71 @@ class Confirmation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget rowBuilder(
-      String head,
-      String price,
-    ) {
-      return Padding(
-        padding: const EdgeInsets.all(
-          10.0,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            FittedBox(
-              // fit: BoxFit.cover,
-              child: Text(
-                head,
-                style: Theme.of(context).textTheme.headlineSmall,
-              ),
-            ),
-            FittedBox(
-              child: DottedLine(
-                lineLength: MediaQuery.of(context).size.width * 0.4,
-              ),
-            ),
-            FittedBox(
-              // fit: BoxFit.contain,
-              child: Text(
-                "\$$price",
-              ),
-            ),
-          ],
-        ),
-      );
-    }
+    // Widget rowBuilder(
+    //   String head,
+    //   String price,
+    // ) {
+    //   return Padding(
+    //     padding: const EdgeInsets.all(
+    //       10.0,
+    //     ),
+    //     child: Row(
+    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    //       children: [
+    //         FittedBox(
+    //           // fit: BoxFit.cover,
+    //           child: Text(
+    //             head,
+    //             style: Theme.of(context).textTheme.headlineSmall,
+    //           ),
+    //         ),
+    //         FittedBox(
+    //           child: DottedLine(
+    //             lineLength: MediaQuery.of(context).size.width * 0.4,
+    //           ),
+    //         ),
+    //         FittedBox(
+    //           // fit: BoxFit.contain,
+    //           child: Text(
+    //             "\$$price",
+    //           ),
+    //         ),
+    //       ],
+    //     ),
+    //   );
+    // }
 
-    Widget elevationButtonBuilder(
-      String title,
-      Function handler,
-    ) {
-      return InkWell(
-        onTap: () => handler,
-        child: Container(
-          width: MediaQuery.of(context).size.width * 0.4,
-          height: MediaQuery.of(context).size.height * 0.08,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(
-              15,
-            ),
-            color: const Color(
-              0xff4B46B8,
-            ),
-          ),
-          child: Center(
-            child: FittedBox(
-              child: Text(
-                title,
-                style: const TextStyle(
-                  color: Colors.white,
-                ),
-                softWrap: true,
-              ),
-            ),
-          ),
-        ),
-      );
-    }
+    // Widget elevationButtonBuilder(
+    //   String title,
+    //   Function handler,
+    // ) {
+    //   return InkWell(
+    //     onTap: () => handler,
+    //     child: Container(
+    //       width: MediaQuery.of(context).size.width * 0.4,
+    //       height: MediaQuery.of(context).size.height * 0.08,
+    //       decoration: BoxDecoration(
+    //         borderRadius: BorderRadius.circular(
+    //           15,
+    //         ),
+    //         color: const Color(
+    //           0xff4B46B8,
+    //         ),
+    //       ),
+    //       child: Center(
+    //         child: FittedBox(
+    //           child: Text(
+    //             title,
+    //             style: const TextStyle(
+    //               color: Colors.white,
+    //             ),
+    //             softWrap: true,
+    //           ),
+    //         ),
+    //       ),
+    //     ),
+    //   );
+    // }
 
     return Scaffold(
       // drawer: const SideDrawer(),
@@ -141,65 +144,72 @@ class Confirmation extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    // horizontal: 20,
-                    ),
+                  horizontal: 10,
+                ),
                 child: Column(
                   children: [
-                    rowBuilder(
-                      "Subtotal",
-                      "235.00",
+                    const DottedLineRow(
+                      title: "Subtotal",
+                      price: 235.00,
                     ),
-                    rowBuilder(
-                      "VAT (15%)",
-                      "4.99",
+                    const DottedLineRow(
+                      title: "VAT (15%)",
+                      price: 4.99,
                     ),
-                    rowBuilder(
-                      "Shipping",
-                      "20.36",
+                    const DottedLineRow(
+                      title: "Shipping",
+                      price: 20.36,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                        top: 10,
-                        left: 10,
-                        right: 10,
-                        bottom: 20,
+                        top: 10.0,
+                        bottom: 10.0,
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          FittedBox(
-                            // fit: BoxFit.cover,
-                            child: Text(
-                              "Total",
-                              style: Theme.of(context).textTheme.displayLarge,
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              width: 80,
+                              child: Text(
+                                "Total",
+                                style: Theme.of(context).textTheme.displayLarge,
+                              ),
                             ),
-                          ),
-                          FittedBox(
-                            child: DottedLine(
-                              lineLength:
-                                  MediaQuery.of(context).size.width * 0.4,
-                            ),
-                          ),
-                          FittedBox(
-                            // fit: BoxFit.contain,
-                            child: Text(
-                              "\$259.36",
-                              style: TextStyle(
-                                fontSize: Theme.of(context)
-                                    .textTheme
-                                    .displayLarge!
-                                    .fontSize,
-                                fontWeight: Theme.of(context)
-                                    .textTheme
-                                    .displayLarge!
-                                    .fontWeight,
-                                color: const Color(
-                                  0xffF76834,
+                            Center(
+                              child: Container(
+                                child: DottedLine(
+                                  lineLength:
+                                      MediaQuery.of(context).size.width * 0.42,
+                                  dashColor: const Color(
+                                    0xff868696,
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                            Container(
+                              width: 80,
+                              child: FittedBox(
+                                child: Text(
+                                  "\$25900.36",
+                                  style: TextStyle(
+                                    fontSize: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .fontSize,
+                                    fontWeight: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .fontWeight,
+                                    color: const Color(
+                                      0xffF76834,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -212,13 +222,13 @@ class Confirmation extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    elevationButtonBuilder(
-                      "ORDER DETAILS",
-                      () {},
+                    ElevationButtonBuilder(
+                      title: "ORDER DETAILS",
+                      handler: () {},
                     ),
-                    elevationButtonBuilder(
-                      "CONTINUE",
-                      () {},
+                    ElevationButtonBuilder(
+                      title: "CONTINUE",
+                      handler: () {},
                     ),
                   ],
                 ),

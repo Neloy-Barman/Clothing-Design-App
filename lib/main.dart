@@ -10,6 +10,9 @@ import './screens/confirmation.dart';
 
 import './screens/market.dart';
 
+import './screens/homebody.dart';
+import './screens/basket.dart';
+
 void main() {
   runApp(
     const ClothingDesignApp(),
@@ -35,6 +38,9 @@ class ClothingDesignApp extends StatelessWidget {
             color: Colors.black,
             fontWeight: FontWeight.w500,
             fontSize: 23,
+          ),
+          iconTheme: IconThemeData(
+            color: Colors.black,
           ),
         ),
         fontFamily: "BeVietnamPro",
@@ -107,7 +113,7 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const MarketScreen(),
+      home: const Basket(),
       routes: {
         ParentScreen.routeScreen: (_) => const ParentScreen(),
         // Profile.routeScreen: (_) => const Profile(),
@@ -115,6 +121,8 @@ class ClothingDesignApp extends StatelessWidget {
         Confirmation.routeScreen: (_) => const Confirmation(),
         // AppSettings.routeScreen: (_) => AppSettings(),
         MarketScreen.routeScreen: (_) => const MarketScreen(),
+        HomeBody.routeScreen: (_) => const HomeBody(),
+        Basket.routeScreen: (_) => const Basket(),
       },
     );
   }

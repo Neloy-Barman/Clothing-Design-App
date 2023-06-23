@@ -1,3 +1,4 @@
+import 'package:clothing_design_app/screens/drawer.dart';
 import 'package:flutter/material.dart';
 // import 'package:badges/badges.dart' as badges;
 
@@ -55,12 +56,21 @@ class _MarketScreenState extends State<MarketScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const SideDrawer(),
       appBar: AppBar(
         title: const Center(
           child: Text(
             "Favourites",
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.abc,
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(
@@ -76,7 +86,7 @@ class _MarketScreenState extends State<MarketScreen> {
           itemCount: products.length,
           itemBuilder: (context, index) {
             return Card(
-              elevation: 5,
+              elevation: 3,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
@@ -89,7 +99,10 @@ class _MarketScreenState extends State<MarketScreen> {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.only(
-                          bottom: 15,
+                          bottom: 10,
+                          right: 8,
+                          left: 8,
+                          top: 8,
                         ),
                         child: Stack(
                           children: [
