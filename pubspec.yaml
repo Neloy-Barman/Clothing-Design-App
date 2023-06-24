@@ -65,6 +65,7 @@ flutter:
   assets:
     - assets/images/google_icon.png
     - assets/images/profile_pic.jpeg
+    - assets/images/clothing_design_logo.png
   # - images/a_dot_burr.jpeg
   # - images/a_dot_ham.jpeg
 

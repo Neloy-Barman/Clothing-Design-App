@@ -5,15 +5,16 @@ import './drawer.dart';
 
 import '../itemWidgets/elevationButtonBuilder.dart';
 
-class HomePage extends StatelessWidget {
-  static const routeScreen = "./home-screen";
+class SignUpPage extends StatelessWidget {
+  static const routeScreen = "./signUp-screen";
 
-  const HomePage({
+  const SignUpPage({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController? nameController;
     TextEditingController? emailController;
     TextEditingController? passwordController;
     return Scaffold(
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Center(
           child: Text(
-            "SIGN IN",
+            "SIGN UP",
             textAlign: TextAlign.center,
           ),
         ),
@@ -40,12 +41,12 @@ class HomePage extends StatelessWidget {
                 children: [
                   FittedBox(
                     child: Text(
-                      "Welcome Back",
+                      "Let's Create an Account",
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                   ),
                   Text(
-                    "Put your password to explore again",
+                    "Create a new account for more explore",
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   const SizedBox(
@@ -54,6 +55,34 @@ class HomePage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          bottom: 20,
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            fillColor: const Color(
+                              0xffFCFCFC,
+                            ),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(
+                                15,
+                              ),
+                              borderSide: const BorderSide(
+                                width: 0,
+                                style: BorderStyle.none,
+                              ),
+                            ),
+                            filled: true,
+                            hintText: "Name",
+                            hintStyle: const TextStyle(
+                              fontSize: 17,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                          controller: nameController,
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(
                           bottom: 20,
@@ -111,13 +140,6 @@ class HomePage extends StatelessWidget {
                         ),
                         controller: passwordController,
                       ),
-                      TextButton(
-                        onPressed: () {},
-                        style: Theme.of(context).textButtonTheme.style,
-                        child: const Text(
-                          "Forgot Password?",
-                        ),
-                      ),
                     ],
                   ),
                   Container(
@@ -126,7 +148,7 @@ class HomePage extends StatelessWidget {
                     ),
                     width: double.infinity,
                     child: ElevationButtonBuilder(
-                      title: "SIGN IN",
+                      title: "SIGN UP",
                       handler: () {},
                     ),
                   ),
@@ -172,7 +194,6 @@ class HomePage extends StatelessWidget {
                         color: const Color(
                           0xffFCFCFC,
                         ),
-                        // color: Colors.brown,
                         borderRadius: BorderRadius.circular(
                           15,
                         ),
@@ -194,7 +215,7 @@ class HomePage extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            "SIGN IN WITH GOOGLE",
+                            "SIGN UP WITH GOOGLE",
                           ),
                         ],
                       ),
@@ -208,7 +229,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    "Don't have an account?",
+                    "Already have an account?",
                   ),
                   TextButton(
                     onPressed: () {},

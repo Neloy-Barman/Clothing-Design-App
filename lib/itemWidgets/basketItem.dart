@@ -54,10 +54,10 @@ class _BasketItemState extends State<BasketItem> {
               children: [
                 Container(
                   height: 140,
-                  width: 130,
+                  width: 110,
                   child: Padding(
                     padding: const EdgeInsets.all(
-                      5,
+                      6,
                     ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(

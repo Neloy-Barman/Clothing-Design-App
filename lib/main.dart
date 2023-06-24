@@ -3,6 +3,8 @@ import "package:flutter/material.dart";
 import './screens/parent.dart';
 
 import './screens/homepage.dart';
+import './screens/signUp.dart';
+
 // import 'widgetBodies/profile.dart';
 import './screens/giftoption.dart';
 import './screens/confirmation.dart';
@@ -60,8 +62,8 @@ class ClothingDesignApp extends StatelessWidget {
         // Text Theme
         textTheme: const TextTheme(
           headlineLarge: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
+            fontWeight: FontWeight.w600,
+            fontSize: 25,
             color: Color(
               0xff1A172C,
             ),
@@ -111,10 +113,24 @@ class ClothingDesignApp extends StatelessWidget {
             ),
           ),
         ),
+        textButtonTheme: const TextButtonThemeData(
+          style: ButtonStyle(
+            textStyle: MaterialStatePropertyAll(
+              TextStyle(
+                color: Color(
+                  0xff4B46B8,
+                ),
+                fontSize: 17,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const Basket(),
+      home: const HomePage(),
       routes: {
+        SignUpPage.routeScreen: (_) => const SignUpPage(),
         ParentScreen.routeScreen: (_) => const ParentScreen(),
         // Profile.routeScreen: (_) => const Profile(),
         GiftOption.route_screen: (_) => const GiftOption(),
