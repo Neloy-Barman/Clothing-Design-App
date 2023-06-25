@@ -4,7 +4,7 @@
 
 |<h2>SIGN UP</h2>|<h2>SIGN IN</h2>|<h2>DRAWER</h2>|
 |----------------|----------------|---------------|
-|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/dbd678a9-27c6-4c84-bee8-1d8504f3fe4b" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/d5db3d93-0e91-44e7-8655-1e1d8fa486ca" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/4e3a67d4-3083-4c54-b9b9-ed3c4e670c25" width="280" height="500" />
+|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/ff2878ae-8cef-4aaf-9a00-eed7f7f7180d" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/20e55f48-2146-44c2-90f6-94497f453156" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/96d4517b-4a92-4d06-9a0b-ed567ab8e2f8" width="280" height="500" />
 
 |<h2>HOME</h2>|<h2>INDIVIDUAL HOMEPAGE</h2>|<h2>FAVOURITES</h2>|
 |-------------|----------------------------|-------------------|
