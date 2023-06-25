@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_line/dotted_line.dart';
 
-import './drawer.dart';
+import './signup.dart';
 
 import '../itemWidgets/elevationButtonBuilder.dart';
 
-class HomePage extends StatelessWidget {
+class SignIn extends StatelessWidget {
   static const routeScreen = "./home-screen";
 
-  const HomePage({
+  const SignIn({
     super.key,
   });
 
@@ -17,7 +17,6 @@ class HomePage extends StatelessWidget {
     TextEditingController? emailController;
     TextEditingController? passwordController;
     return Scaffold(
-      drawer: const SideDrawer(),
       appBar: AppBar(
         title: const Center(
           child: Text(
@@ -211,7 +210,11 @@ class HomePage extends StatelessWidget {
                     "Don't have an account?",
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed(
+                        SignUp.routeScreen,
+                      );
+                    },
                     style: Theme.of(context).textButtonTheme.style,
                     child: const Text(
                       "Sign Up",

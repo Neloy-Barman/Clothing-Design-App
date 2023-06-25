@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 
 import './screens/parent.dart';
 
-import './screens/homepage.dart';
+import 'screens/signin.dart';
 import './screens/signUp.dart';
 
 // import 'widgetBodies/profile.dart';
@@ -16,6 +16,8 @@ import './screens/homebody.dart';
 import './screens/basket.dart';
 
 import './screens/markethome.dart';
+
+import './screens/mainhomescreen.dart';
 
 void main() {
   runApp(
@@ -130,9 +132,9 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const MarketHomeScreen(),
+      home: const MainHomeScreen(),
       routes: {
-        SignUpPage.routeScreen: (_) => const SignUpPage(),
+        SignUp.routeScreen: (_) => const SignUp(),
         ParentScreen.routeScreen: (_) => const ParentScreen(),
         // Profile.routeScreen: (_) => const Profile(),
         GiftOption.route_screen: (_) => const GiftOption(),
@@ -142,6 +144,7 @@ class ClothingDesignApp extends StatelessWidget {
         HomeBody.routeScreen: (_) => const HomeBody(),
         Basket.routeScreen: (_) => const Basket(),
         MarketHomeScreen.routeScreen: (_) => const MarketHomeScreen(),
+        MainHomeScreen.routeScreen: (_) => const MainHomeScreen(),
       },
     );
   }

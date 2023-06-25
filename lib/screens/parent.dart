@@ -30,7 +30,7 @@ class _ParentScreenState extends State<ParentScreen> {
   Widget iconBuilder(IconData icon) {
     return Icon(
       icon,
-      size: 25,
+      size: 30,
       color: const Color.fromARGB(
         255,
         211,
@@ -50,13 +50,21 @@ class _ParentScreenState extends State<ParentScreen> {
       const Profile(),
     ];
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            screenNames[page],
-          ),
-        ),
-      ),
+      appBar: page == 2
+          ? AppBar(
+              title: Center(
+                child: Text(
+                  screenNames[page],
+                ),
+              ),
+            )
+          : AppBar(
+              title: Center(
+                child: Text(
+                  screenNames[page],
+                ),
+              ),
+            ),
       body: page == 3
           ? AppSettings()
           : page == 4
@@ -69,7 +77,7 @@ class _ParentScreenState extends State<ParentScreen> {
           243,
           243,
         ),
-        height: MediaQuery.of(context).size.height * 0.085,
+        height: MediaQuery.of(context).size.height * 0.09,
         animationDuration: const Duration(
           milliseconds: 10,
         ),

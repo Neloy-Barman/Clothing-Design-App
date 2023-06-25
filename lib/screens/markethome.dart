@@ -107,6 +107,7 @@ class _MarketHomeScreenState extends State<MarketHomeScreen> {
             Container(
               // color: Colors.amber,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     // color: Colors.red,
@@ -126,6 +127,36 @@ class _MarketHomeScreenState extends State<MarketHomeScreen> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(
+                      8,
+                    ),
+                    child: Text(
+                      "Best of the Week",
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    // color: Colors.red,
+                    width: double.infinity,
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          for (var index = 0; index < products.length; index++)
+                            HorizontalListItem(
+                              title: products[index].title,
+                              imageUrl: products[index].imageUrl,
+                              subtitle: products[index].subtitle,
+                              price: products[index].price,
+                            ),
+                        ],
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),

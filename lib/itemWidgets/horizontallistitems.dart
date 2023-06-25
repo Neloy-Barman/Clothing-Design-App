@@ -16,6 +16,10 @@ class HorizontalListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.symmetric(
+        vertical: 4.3,
+        horizontal: 12,
+      ),
       elevation: 5,
       child: Container(
         child: Column(
@@ -27,8 +31,8 @@ class HorizontalListItem extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
-                    width: 140,
-                    height: 140,
+                    width: 130,
+                    height: 130,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(
                         5,
@@ -71,16 +75,22 @@ class HorizontalListItem extends StatelessWidget {
                       ),
                     ),
                   ),
+                  SizedBox(
+                    height: 5,
+                  ),
                   FittedBox(
                     child: Text(
                       subtitle,
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),
+                  SizedBox(
+                    height: 5,
+                  ),
                   Padding(
                     padding: const EdgeInsets.only(
-                      bottom: 8,
-                    ),
+                        // bottom: 8,
+                        ),
                     child: FittedBox(
                       child: Text(
                         "\$${price.toStringAsFixed(
