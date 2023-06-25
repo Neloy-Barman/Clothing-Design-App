@@ -15,6 +15,8 @@ import './screens/market.dart';
 import './screens/homebody.dart';
 import './screens/basket.dart';
 
+import './screens/markethome.dart';
+
 void main() {
   runApp(
     const ClothingDesignApp(),
@@ -128,7 +130,7 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const MarketHomeScreen(),
       routes: {
         SignUpPage.routeScreen: (_) => const SignUpPage(),
         ParentScreen.routeScreen: (_) => const ParentScreen(),
@@ -139,6 +141,7 @@ class ClothingDesignApp extends StatelessWidget {
         MarketScreen.routeScreen: (_) => const MarketScreen(),
         HomeBody.routeScreen: (_) => const HomeBody(),
         Basket.routeScreen: (_) => const Basket(),
+        MarketHomeScreen.routeScreen: (_) => const MarketHomeScreen(),
       },
     );
   }
