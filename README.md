@@ -14,8 +14,7 @@
 
 |<h2>PROFILE</h2>|<h2>SETTINGS</h2>|<h2>GIFT OPTION</h2>|
 |----------------|-----------------|--------------------|
-|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/83468beb-6163-4f43-b2ca-8a63db89b510" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/94874862-8a42-407d-a6aa-6252c92fde9" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/9fc5232a-ec9d-4e9a-8760-158d17764bf4" width="280" height="500" />
+|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/83468beb-6163-4f43-b2ca-8a63db89b510" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/191cc7a2-34d1-47a5-90c0-887a43debf5d" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/9fc5232a-ec9d-4e9a-8760-158d17764bf4" width="280" height="500" />
 
 ## [N.B: I don't own the UI Design. I collected this resource from https://uihut.com/mobile-app-designs/clothing-app-ui-kit-style-loop/19767. I am giving this design a structure using flutter and dart for practicing purpose.] 
-
 
