@@ -1,4 +1,4 @@
-# STYLE LOOP: An E-commerce clothing style App. 
+# STYLE LOOP: An E-commerce clothing design App. 
 
 ## In every pages dummy data are used to check the design working progress. Some more screens and the full backend part is in development progress. The app is always tested in the real device. 
 
