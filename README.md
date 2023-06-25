@@ -1,6 +1,6 @@
 # STYLE LOOP: An E-commerce clothing style App. 
-I don't own the UI Design. I collected this resource from https://uihut.com/mobile-app-designs/clothing-app-ui-kit-style-loop/19767 for practicing purpose.
-I am giving this design a structure using flutter and dart.  
+## [N.B: I don't own the UI Design. I collected this resource from https://uihut.com/mobile-app-designs/clothing-app-ui-kit-style-loop/19767 for practicing purpose. I am giving this design a structure using flutter and dart.]  
+
 
 A new Flutter project.
 
