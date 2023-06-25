@@ -8,17 +8,15 @@
 
 |<h2>HOME</h2>|<h2>INDIVIDUAL HOMEPAGE</h2>|<h2>FAVOURITES</h2>|
 |-------------|----------------------------|-------------------|
-|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/570cdc14-fe3c-4a0d-bffc-aefecb8ed585" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/01094407-41e1-4f4b-a8bc-1acf6abb7479" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/c30a6df7-facc-4535-916d-f602a297c5d1" width="280" height="500" />
+|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/f128680c-392c-47e4-a2aa-7022c94e5f81" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/798b0ac3-2a1e-4ce6-ad74-cf4580c2a595" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/46ecc58d-bedd-46e9-9d16-42f463dc749e" width="280" height="500" />
 
 |<h2>SHOPPING CART</h2>|<h2>DISMISSABLE</h2>|<h2>CONFIRMATION</h2>|
 |----------------------|--------------------|--------------------|
-|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/414cf85d-6686-49aa-a164-52cfa886b9cc" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/2e3c721c-153c-4385-8d7d-ddc1126a349e" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/93498cf6-ff41-4478-a8b1-6132265d0172" width="280" height="500" />
+|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/325c9d64-0b4e-4133-b3f4-54ad240c4b15" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/a91c4207-7709-424e-b453-b5e928d3d8bf" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/d0c1f8e6-0e2f-4f03-9319-03c6d693f0e8" width="280" height="500" />
 
 |<h2>PROFILE</h2>|<h2>SETTINGS</h2>|<h2>GIFT OPTION</h2>|
 |----------------|-----------------|--------------------|
-|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/83468beb-6163-4f43-b2ca-8a63db89b510" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/191cc7a2-34d1-47a5-90c0-887a43debf5d" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/9fc5232a-ec9d-4e9a-8760-158d17764bf4" width="280" height="500" />
+|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/153b4261-47d3-452d-a7bd-fbdad82a9595" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/14c96936-adcd-4988-ad06-e5a221b076c5" width="280" height="500" />|<img src="https://github.com/Neloy-Barman/Clothing-Design-App/assets/110896263/4760ee36-b053-4cc8-9e7a-c9973f8677ef" height="500" />
 
 ## [N.B: I don't own the UI Design. I collected this resource from https://uihut.com/mobile-app-designs/clothing-app-ui-kit-style-loop/19767. I am giving this design a structure using flutter and dart for practicing purpose.]
-
-
 
