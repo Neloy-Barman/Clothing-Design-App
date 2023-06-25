@@ -20,7 +20,7 @@ class HorizontalListItem extends StatelessWidget {
         vertical: 4.3,
         horizontal: 12,
       ),
-      elevation: 5,
+      elevation: 3,
       child: Container(
         child: Column(
           children: [

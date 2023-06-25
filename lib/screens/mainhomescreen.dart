@@ -4,6 +4,8 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import '../models/Product.dart';
 
 import '../screens/drawer.dart';
+import '../screens/parent.dart';
+import 'shoppingcart.dart';
 
 import '../itemWidgets/horizontallistitems.dart';
 
@@ -24,6 +26,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   bool woman = false;
   bool kids = false;
   bool family = false;
+  int page = 2;
 
   List<Product> products = [
     Product(
@@ -62,23 +65,11 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
     ),
   ];
 
-  // For NavigationBar index
-  int page = 2;
-
-  // AppBar Titles according to screens
-  var screenNames = [
-    "SHOPPING CART",
-    "FAVOURITES",
-    "HOME",
-    "SETTINGS",
-    "PROFILE",
-  ];
-
   // Navigation Bar Icon builder
   Widget iconBuilder(IconData icon) {
     return Icon(
       icon,
-      size: 30,
+      size: 25,
       color: const Color.fromARGB(
         255,
         211,
@@ -204,9 +195,18 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
           milliseconds: 10,
         ),
         onTap: (index) {
-          setState(() {
-            page = index;
-          });
+          if (index != page) if (index == 0)
+            Navigator.of(context).pushNamed(
+              ShoppingCart.routeScreen,
+            );
+          else
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(
+                builder: (_) => ParentScreen(
+                  page: index,
+                ),
+              ),
+            );
         },
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: const Color(

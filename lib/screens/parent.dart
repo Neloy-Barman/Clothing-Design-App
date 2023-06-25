@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
+import '../screens/mainhomescreen.dart';
+import 'shoppingcart.dart';
+
 import '../widgetBodies/settings.dart';
 import '../widgetBodies/profile.dart';
 
 class ParentScreen extends StatefulWidget {
   static const routeScreen = "./parent-screen";
 
-  const ParentScreen({
+  int? page;
+
+  ParentScreen({
     super.key,
+    required this.page,
   });
   @override
   State<StatefulWidget> createState() {
@@ -17,20 +23,18 @@ class ParentScreen extends StatefulWidget {
 }
 
 class _ParentScreenState extends State<ParentScreen> {
-  int page = 0;
-
   var screenNames = [
     "SHOPPING CART",
     "FAVOURITES",
-    "HOME",
-    "SETTINGS",
+    " ",
+    "APP SETTINGS",
     "PROFILE",
   ];
 
   Widget iconBuilder(IconData icon) {
     return Icon(
       icon,
-      size: 30,
+      size: 25,
       color: const Color.fromARGB(
         255,
         211,
@@ -49,25 +53,26 @@ class _ParentScreenState extends State<ParentScreen> {
       AppSettings(),
       const Profile(),
     ];
+
     return Scaffold(
-      appBar: page == 2
+      appBar: widget.page == 2
           ? AppBar(
               title: Center(
                 child: Text(
-                  screenNames[page],
+                  screenNames[widget.page!],
                 ),
               ),
             )
           : AppBar(
               title: Center(
                 child: Text(
-                  screenNames[page],
+                  screenNames[widget.page!],
                 ),
               ),
             ),
-      body: page == 3
+      body: widget.page == 3
           ? AppSettings()
-          : page == 4
+          : widget.page == 4
               ? const Profile()
               : Container(),
       bottomNavigationBar: CurvedNavigationBar(
@@ -77,20 +82,29 @@ class _ParentScreenState extends State<ParentScreen> {
           243,
           243,
         ),
-        height: MediaQuery.of(context).size.height * 0.09,
+        height: MediaQuery.of(context).size.height * 0.07,
         animationDuration: const Duration(
           milliseconds: 10,
         ),
         onTap: (index) {
-          setState(() {
-            page = index;
-          });
+          if (index == 0)
+            Navigator.of(context).pushNamed(
+              ShoppingCart.routeScreen,
+            );
+          else if (index == 2)
+            setState(() {
+              widget.page = index;
+            });
+          else
+            Navigator.of(context).pushReplacementNamed(
+              MainHomeScreen.routeScreen,
+            );
         },
         backgroundColor: Colors.white,
         buttonBackgroundColor: const Color(
           0xff4B46B8,
         ),
-        index: 0,
+        index: widget.page!,
         items: [
           iconBuilder(
             Icons.shopping_cart_outlined,

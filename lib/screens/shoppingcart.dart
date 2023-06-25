@@ -7,17 +7,17 @@ import '../itemWidgets/elevationButtonBuilder.dart';
 
 import '../models/Product.dart';
 
-class Basket extends StatefulWidget {
+class ShoppingCart extends StatefulWidget {
   static const routeScreen = "./basket-screen";
-  const Basket({
+  const ShoppingCart({
     super.key,
   });
 
   @override
-  State<Basket> createState() => _BasketState();
+  State<ShoppingCart> createState() => _ShoppingCartState();
 }
 
-class _BasketState extends State<Basket> {
+class _ShoppingCartState extends State<ShoppingCart> {
   List<Product> products = [
     Product(
       title: "Men Brown Jacket",

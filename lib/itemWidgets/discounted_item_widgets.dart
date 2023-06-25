@@ -20,6 +20,7 @@ class DiscountedItem extends StatelessWidget {
         5,
       ),
       child: Card(
+        elevation: 3,
         child: Container(
           child: Row(
             children: [
