@@ -5,10 +5,10 @@ import './screens/parent.dart';
 import 'screens/signin.dart';
 import './screens/signUp.dart';
 
-// import 'widgetBodies/profile.dart';
+import 'widgetBodies/profile.dart';
 import './screens/giftoption.dart';
 import './screens/confirmation.dart';
-// import 'widgetBodies/settings.dart';
+import 'widgetBodies/settings.dart';
 
 import 'screens/favourites.dart';
 
@@ -132,14 +132,14 @@ class ClothingDesignApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const Favorites(),
+      home: MarketHomeScreen(),
       routes: {
         SignUp.routeScreen: (_) => const SignUp(),
         // ParentScreen.routeScreen: (_) => const ParentScreen(),
-        // Profile.routeScreen: (_) => const Profile(),
+        Profile.routeScreen: (_) => const Profile(),
         GiftOption.route_screen: (_) => const GiftOption(),
         Confirmation.routeScreen: (_) => const Confirmation(),
-        // AppSettings.routeScreen: (_) => AppSettings(),
+        AppSettings.routeScreen: (_) => AppSettings(),
         Favorites.routeScreen: (_) => const Favorites(),
         HomeBody.routeScreen: (_) => const HomeBody(),
         ShoppingCart.routeScreen: (_) => const ShoppingCart(),

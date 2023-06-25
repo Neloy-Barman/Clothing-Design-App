@@ -80,34 +80,35 @@ class _ShoppingCartState extends State<ShoppingCart> {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    BasketItem(
-                      title: products[0].title,
-                      imageUrl: products[0].imageUrl,
-                      price: products[0].price,
-                      color: "Deep Brown",
-                      size: "M",
-                    ),
-                    BasketItem(
-                      title: products[0].title,
-                      imageUrl: products[0].imageUrl,
-                      price: products[0].price,
-                      color: "Deep Brown",
-                      size: "M",
-                    ),
-                    BasketItem(
-                      title: products[0].title,
-                      imageUrl: products[0].imageUrl,
-                      price: products[0].price,
-                      color: "Deep Brown",
-                      size: "M",
-                    ),
-                    BasketItem(
-                      title: products[0].title,
-                      imageUrl: products[0].imageUrl,
-                      price: products[0].price,
-                      color: "Deep Brown",
-                      size: "M",
-                    ),
+                    for (int index = 0; index < products.length - 1; index += 2)
+                      BasketItem(
+                        title: products[index].title,
+                        imageUrl: products[index].imageUrl,
+                        price: products[index].price,
+                        color: "Deep Brown",
+                        size: "M",
+                      ),
+                    // BasketItem(
+                    //   title: products[0].title,
+                    //   imageUrl: products[0].imageUrl,
+                    //   price: products[0].price,
+                    //   color: "Deep Brown",
+                    //   size: "M",
+                    // ),
+                    // BasketItem(
+                    //   title: products[0].title,
+                    //   imageUrl: products[0].imageUrl,
+                    //   price: products[0].price,
+                    //   color: "Deep Brown",
+                    //   size: "M",
+                    // ),
+                    // BasketItem(
+                    //   title: products[0].title,
+                    //   imageUrl: products[0].imageUrl,
+                    //   price: products[0].price,
+                    //   color: "Deep Brown",
+                    //   size: "M",
+                    // ),
                   ],
                 ),
               ),
